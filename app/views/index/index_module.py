@@ -4,5 +4,6 @@ from flask import Blueprint
 index_blu = Blueprint('index', __name__)
 
 @index_blu.route("/")
+@index_blu.route('/index')
 def index():
     return "Hello World!"

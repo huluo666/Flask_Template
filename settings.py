@@ -16,13 +16,13 @@ class Config(object):
 
     pass
 
-
+# 生产环境
 class ProductionConfig(Config):
     DATABASE_URI = 'mysql://user@localhost/foo'
     ENV = "production"
     pass
 
-
+# 开发环境
 class DevelopmentConfig(Config):
     DEBUG = True
     ENV = "development"
@@ -31,7 +31,7 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_ECHO = True  # 打开调试模式
     pass
 
-
+# 测试环境
 class TestingConfig(Config):
     TESTING = True
     pass
